@@ -1,0 +1,11 @@
+one:
+  id: 10,
+  title: Title 1
+  body: Body 1
+  published: true
+
+two:
+  id: 11,
+  title: Title 2
+  body: Body 2
+  published: true
