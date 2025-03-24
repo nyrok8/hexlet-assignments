@@ -1,0 +1,23 @@
+p style='color: green' = notice
+
+div
+  h3 = @task.name
+  p = @task.description
+
+  b status:
+  p = @task.status
+
+  b creator:
+  p = @task.creator
+
+  b performer:
+  p = @task.performer
+
+  - if @task.completed
+    p style='color: green' Выполнена
+  - else
+    p style='color: red' Не выполнена
+
+div
+  = button_to 'Edit', edit_task_path(@task), method: :get
+  = button_to 'Destroy', @task, method: :delete

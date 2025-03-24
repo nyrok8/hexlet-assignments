@@ -1,0 +1,22 @@
+p style='color: green' = notice
+
+h1 Tasks
+hr
+
+= button_to 'New task', new_task_path, method: :get
+hr
+
+- @tasks.each do |task|
+  h3 = link_to task.name, task
+
+  b status:
+  p = task.status
+
+  b creator:
+  p = task.creator
+
+  - if task.completed
+    p style='color: green' Выполнена
+  - else
+    p style='color: red' Не выполнена
+  hr
