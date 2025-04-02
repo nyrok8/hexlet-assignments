@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: Cast Expelliarmus
+  description: Disarm Draco during the Dueling Club session.
+  user: one
+  status: one
+
+two:
+  name: Brew Polyjuice Potion
+  description: Prepare potion to sneak into the Slytherin common room.
+  user: two
+  status: two
