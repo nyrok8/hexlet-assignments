@@ -1,0 +1,28 @@
+- content_for :title do
+  = @post.title
+p
+  strong.me-2 Body:
+  = @post.body
+/ BEGIN
+
+/ END
+hr
+
+.d-flex
+  = link_to 'Edit', edit_post_path(@post), class: 'btn btn-outline-primary me-2'
+  = link_to 'Back', :back, class: 'btn btn-outline-primary'
+
+.d-flex
+  = simple_form_for([@post, @comment]) do |f|
+    = f.input :body, as: :text
+    = f.button :submit
+
+.d-flex
+  ul
+    - @comments.each do |comment|
+      li
+        div
+          = comment.body
+          div
+            = link_to 'Edit', edit_post_post_comment_path(@post, comment), class: 'btn btn-outline-primary'
+            = button_to 'Delete', [@post, comment], method: :delete, data: { turbo_confirm: 'Точно удалить?' }, class: 'btn btn-outline-primary'
