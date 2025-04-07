@@ -1,0 +1,21 @@
+en:
+  show: Show
+  edit: Edit
+  destroy: Delete
+  destroy_confirmation: Are you sure?
+  back: Back
+
+  layouts:
+    shared:
+      nav:
+        home: Home
+        posts: Posts
+        hexlet_logo: Hexlet
+
+    application:
+      title: I18n
+      hexlet_title: © Hexlet, %{year}
+
+  home:
+    index:
+      title: Home page
